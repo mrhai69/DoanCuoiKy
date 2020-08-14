@@ -1,0 +1,101 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title> Trang chủ ngân hàng số </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.ico">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/css/slicknav.css">
+    <link rel="stylesheet" href="/assets/css/flaticon.css">
+    <link rel="stylesheet" href="/assets/css/gijgo.css">
+    <link rel="stylesheet" href="/assets/css/animate.min.css">
+    <link rel="stylesheet" href="/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="/assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="/assets/css/themify-icons.css">
+    <link rel="stylesheet" href="/assets/css/slick.css">
+    <link rel="stylesheet" href="/assets/css/nice-select.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+    <!-- ? Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="/assets/img/logo/loder.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader Start -->
+    <header>
+        <!--? Header Start -->
+        <div class="header-area">
+            <div class="main-header header-sticky">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <!-- Logo -->
+                        <div class="col-xl-2 col-lg-2 col-md-1">
+                            <div class="logo">
+                                <a href="/" style="color: #2e0e8c;font-weight: bold; ">SIMPLE BANK</a>
+                            </div>
+                        </div>
+                        <div class="col-xl-10 col-lg-10 col-md-10">
+                            <div class="menu-main d-flex align-items-center justify-content-end">
+                                <!-- Main-menu -->
+                                <div class="main-menu f-right d-none d-lg-block">
+                                    <nav>
+                                        <ul id="navigation">
+                                            <li><a href="/">Trang chủ</a></li>
+                                            <% if(!user){%>
+                                            <li><a href="/login">Đăng nhập</a></li>
+                                            <li><a href="/register">Tham gia ngay</a></li>
+                                            <%} else if(user){%>
+                                            <% if (user.status === 1){%>
+                                            <li><a href="#">Chuyển tiền</a>
+                                                <ul class="submenu">
+                                                    <li><a href="/transfermoney">Tạo giao dịch mới</a></li>
+                                                    <li><a href="/transferinter">Tạo giao dịch liên ngân hàng</a></li>
+                                                    <li><a href="/listtransfermoney">Lịch sử giao dịch</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Tài khoản tiết kiệm</a>
+                                                <ul class="submenu">
+                                                    <li><a href="/save">Tạo tài khoản tiết kiệm</a></li>
+                                                    <li><a href="/listsave">Lịch sử sổ tài khoản tiết kiệm</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>Số dư hiện tại : <%= user.acblan%> VND</li>
+                                            <% } else if(user.status === 0) {%>
+                                            <li><a href="/verify">Xác thực tài khoản</a></li>
+                                            <%} else {%>
+                                            <li><a href="/#">Tài khoản đang chờ nhân viên xác thực</a></li>
+                                            <%}%>
+                                            <li><a href="/logout">(<%= user.name%>)Đăng xuất</a></li>
+                                            <%}%>
+                                            
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>   
+                    <!-- Mobile Menu -->
+                    <div class="col-12">
+                        <div class="mobile_menu d-block d-lg-none"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+</header>

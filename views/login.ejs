@@ -1,0 +1,47 @@
+<%- include('header.ejs')%>
+<link rel="stylesheet" href="/css/register.css">
+<main>
+    <!--? Hero Start -->
+    <div class="slider-area2">
+        <div class="slider-height2 d-flex align-items-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="hero-cap text-center">
+                            <h2>Ngân hàng với sự bảo hộ của Rồng bay Phựng mú!</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+    <!--? Brand Area Start -->
+    <div class="main-w3layouts wrapper">
+		<h1>Đăng nhập tài khoản!</h1>
+		<div class="main-agileinfo">
+			<div class="agileits-top">
+				<form action="/login" method="post">
+					<input class="text email" type="email" name="email" placeholder="Email" required autocomplete="off">
+					<input class="text w3lpass" type="password" name="password" placeholder="password" required autocomplete="off">
+					<input type="submit" value="SIGNIN">
+				</form>
+				<p>Need an Account? <a href="/register"> Register Now!</a></p>
+			</div>
+		</div>
+		<ul class="colorlib-bubbles">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+    <!-- Brand Area End -->
+</main>
+<%- include('footer.ejs')%>
